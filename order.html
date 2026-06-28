@@ -254,7 +254,21 @@ function sendOrder(){
 🏠 العنوان: ${address}
 📦 المنتج: ${productName}`;
 
-  window.open("https://wa.me/213795619382?text=" + encodeURIComponent(msg), "_blank");
+ // حفظ الطلب في لوحة التحكم
+let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+orders.push({
+    product: productName,
+    name: name,
+    phone: phone,
+    state: state,
+    address: address,
+    date: new Date().toLocaleString("ar-DZ"),
+    status: "جديد"
+});
+
+localStorage.setItem("orders", JSON.stringify(orders));
+ window.open("https://wa.me/213795619382?text=" + encodeURIComponent(msg), "_blank");
 }
 </script>
 
