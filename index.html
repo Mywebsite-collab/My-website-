@@ -189,41 +189,33 @@ body.dark-mode a{
 }
   
 /* المصباح */
-.lamp-container{
-    position: fixed;
+.lamp-container{  
+    position: fixed;  
     top: 0;
-    left: 76px; /* غيّر الرقم لتحريك المصباح يمينًا أو يسارًا */
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    z-index: 99999;
-    transition: all .4s ease;
-}
-
-.lamp-cord{
-    width: 4px;
-    height: 90px;
-    background: #444;
-    margin: auto;
-}
-
-.lamp{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: #ffe66d;
-    font-size: 30px;
-    cursor: pointer;
-
-    box-shadow: 0 0 25px #ffd54f;
-    transition: .4s ease;
+  left: 70px;
+    z-index: 99999;  
+    transition: all .4s ease;  
+}  
+  
+.lamp-cord{  
+    width:4px;  
+    height:90px;  
+    background:#444;  
+    margin:auto;  
+}  
+  
+.lamp{  
+    width:60px;  
+    height:60px;  
+    border-radius:50%;  
+    background:#ffe66d;  
+    display:flex;  
+    justify-content:center;  
+    align-items:center;  
+    font-size:30px;  
+    cursor:pointer;  
+    box-shadow:0 0 25px #ffd54f;  
+    transition:.4s;  
 }
 
 body.dark-mode .lamp{
