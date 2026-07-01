@@ -82,6 +82,7 @@ body {
   height: 200px;
   background: url('images/Hassan.png') center/cover no-repeat;
   margin-top: 20px;
+  margin-bottom: 40px; /* المسافة بين الصورة والتأثير */
   border-radius: 12px;
 }
 
