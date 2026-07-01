@@ -224,31 +224,21 @@ body.dark-mode a{
 
 /* جسم المصباح */
 .lamp{
-    width:100px;
-    height:100px;
+    width:60px;
+    height:60px;
     margin:-2px auto 0;
-    position:relative;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%,#fff9b8,#ffd54f 70%);
     display:flex;
     justify-content:center;
     align-items:center;
-    border-radius:50%;
-    background:#6d6d72;
-    border:6px solid #f2c06a;
+    font-size:30px;
     cursor:pointer;
+    position:relative;
+    box-shadow:
+        0 0 18px rgba(255,220,70,.8),
+        0 0 45px rgba(255,220,70,.45);
     transition:.4s;
-    box-sizing:border-box;
-}
-
-/* الإيموجي في المنتصف */
-.lamp::after{
-    content:"💡";
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    font-size:42px;
-    line-height:1;
-    z-index:2;
 }
 
 /* هالة الضوء */
@@ -379,7 +369,9 @@ body.dark-mode .lamp{
 <div class="lamp-container">
   <div class="lamp-cord"></div>
 
-  <div class="lamp" id="lamp"></div>
+  <div class="lamp" id="lamp">
+    💡
+  </div>
 </div>
   
   <button class="neon-btn" onclick="openAdmin()">دخول لوحة التحكم</button>
